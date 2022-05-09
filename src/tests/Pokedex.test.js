@@ -43,7 +43,8 @@ describe('5. Teste o componente <Pokedex.js />', () => {
       const index = screen.getByRole('button', { name: button });
       expect(index).toBeInTheDocument();
     });
-    expect(screen.getAllByTestId('pokemon-type-button')).toHaveLength(7);
+    const NUMBER_SEVEN = 7;
+    expect(screen.getAllByTestId('pokemon-type-button')).toHaveLength(NUMBER_SEVEN);
   });
   test('Teste se a Pokédex contém um botão para resetar o filtro.', () => {
     RenderWithRouter(<App />);
